@@ -1,10 +1,9 @@
 import React from 'react';
 import style from './Book.module.css';
 
-const Book = (props) => {
-  const { title, author } = props;
+const Book = (prop) => {
+  const { title, author } = prop;
   return (
-
     <div>
       <div className={style.bookcard}>
         <div className={style.itemBook}>
