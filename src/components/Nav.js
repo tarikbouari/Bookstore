@@ -24,7 +24,7 @@ const Nav = () => (
 
         </ul>
       </div>
-      <span> Hello</span>
+      <span> User</span>
     </nav>
   </header>
 
