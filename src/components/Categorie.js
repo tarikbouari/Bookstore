@@ -1,10 +1,9 @@
-import React from "react";
+import React from 'react';
 
-const Categories = () => {
+const Categories = () => (
+  <div>
+    <button type="submit" className="btn btn-primary mx-5 w-25">Check Status</button>
+  </div>
+);
 
-    return (
-        <div>
-             <button type="submit">Check Status</button>
-        </div>
-    )
-}
+export default Categories;
