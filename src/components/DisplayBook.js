@@ -3,10 +3,10 @@ import AddBook from './AddBook';
 import Book from './Book';
 
 const DisplayBook = () => {
-  const books = [
-    { title: 'tarik', author: 'bouari', id: 1 },
-    { title: 'dona', author: 'persie', id: 2 },
-  ];
+  // const books = [
+  //   { title: 'tarik', author: 'bouari', id: 1 },
+  //   { title: 'dona', author: 'persie', id: 2 },
+  // ];
 
   return (
     <div>
