@@ -29,7 +29,6 @@ const RMV_BOOK = 'redux/books/book/RMV_BOOK';
                 title: action.titleBook,
                 author: action.author,
                 id : action.id
-
             }
         ]
         case RMV_BOOK :
