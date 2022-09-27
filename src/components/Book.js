@@ -3,6 +3,7 @@ import style from './Book.module.css';
 
 const Book = (prop) => {
   const { title, author } = prop;
+  console.log(prop)
   return (
     <div>
       <div className={style.bookcard}>
