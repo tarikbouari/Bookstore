@@ -8,7 +8,7 @@ const AddBook = () => (
       <div className={style.BoxInput}>
         <input type="text" placeholder="Book title" />
         <input type="text" placeholder="Author" />
-        <button type="button" className="btn btn-primary " >Add </button>
+        <button type="button" className="btn btn-primary">Add </button>
       </div>
     </form>
   </div>
