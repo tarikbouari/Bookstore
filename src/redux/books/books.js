@@ -1,5 +1,4 @@
-const initialState = [{ title: 'tarik', author: 'bouari', id: 1 },
-  { title: 'dona', author: 'persie', id: 2 }];
+const initialState = [];
 
 const ADD_BOOK = 'redux/books/book/ADD_BOOK';
 const RMV_BOOK = 'redux/books/book/RMV_BOOK';
