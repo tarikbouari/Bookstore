@@ -24,7 +24,6 @@ const AddBook = () => {
     };
 
     dispatch(enterBook(book));
-    console.log(book);
     setStateForm({ title: '', author: '' });
   };
   return (
