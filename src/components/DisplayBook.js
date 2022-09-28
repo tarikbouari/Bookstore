@@ -8,7 +8,12 @@ const DisplayBook = () => {
   return (
     <div>
       {books.map((book) => (
-        <Book key={book.id} title={book.title} author={book.author} />
+        <Book
+          id={book.id}
+          key={book.id}
+          title={book.title}
+          author={book.author}
+        />
       ))}
       <AddBook />
     </div>
