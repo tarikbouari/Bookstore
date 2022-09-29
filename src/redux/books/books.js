@@ -1,31 +1,15 @@
-const initialState = [];
+const initialState = [{ title: 'tarik', author: 'bouari', id: 1 },
+  { title: 'dona', author: 'persie', id: 2 }];
 
-const nextTodoId = 0;
 const ADD_BOOK = 'redux/books/book/ADD_BOOK';
 const RMV_BOOK = 'redux/books/book/RMV_BOOK';
-
-export const enterBook = (titleBook, author) => ({
-  type: ADD_BOOK,
-  id: nextTodoId + 1,
-  titleBook,
-  author,
-});
-
-export const removeBook = (id) => ({
-  type: RMV_BOOK,
-  id,
-});
 
 export const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [
         ...state,
-        {
-          title: action.titleBook,
-          author: action.author,
-          id: action.id,
-        },
+        action.book,
       ];
     case RMV_BOOK:
       return state.filter((item) => item.id !== action.id);
@@ -34,3 +18,13 @@ export const bookReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export const enterBook = (book) => ({
+  type: ADD_BOOK,
+  book,
+});
+
+export const removeBook = (id) => ({
+  type: RMV_BOOK,
+  id,
+});
