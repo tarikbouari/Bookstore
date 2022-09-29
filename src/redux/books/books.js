@@ -1,16 +1,15 @@
-const initialState = [{ title: 'tarik', author: 'bouari', id: 1 },
-  { title: 'dona', author: 'persie', id: 2 }];
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import axios from 'axios';
 
-const ADD_BOOK = 'redux/books/book/ADD_BOOK';
-const RMV_BOOK = 'redux/books/book/RMV_BOOK';
 
-export const bookReducer = (state = initialState, action) => {
+const ADD_BOOK = "bookstore/books/ADD_BOOK";
+const RMV_BOOK = "bookstore/books/RMV_BOOK";
+const GET_BOOK = "bookstore/books/GET_BOOKS"
+
+export const bookReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return [
-        ...state,
-        action.book,
-      ];
+      return [...state, action.payload];
     case RMV_BOOK:
       return state.filter((item) => item.id !== action.id);
 
@@ -21,7 +20,7 @@ export const bookReducer = (state = initialState, action) => {
 
 export const enterBook = (book) => ({
   type: ADD_BOOK,
-  book,
+  payload: book,
 });
 
 export const removeBook = (id) => ({
