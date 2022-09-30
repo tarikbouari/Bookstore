@@ -5,6 +5,13 @@
 }
 
 body {
+  background-color: #fafafa !important;
+  font-family: 'Montserrat';
+  height: 100vh !important;
+  overflow: hidden;
+}
+
+.container-fluid {
   background-color: #fff;
 }
 
