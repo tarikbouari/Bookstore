@@ -6,11 +6,11 @@ import { addBook } from '../redux/books/books';
 
 const AddBook = () => {
   const dispatch = useDispatch();
-  const [stateForm, setStateForm] = useState({ 
-    title: '', 
+  const [stateForm, setStateForm] = useState({
+    title: '',
     author: '',
     category: '',
-  
+
   });
 
   const changeFormState = (e) => {
@@ -27,11 +27,11 @@ const AddBook = () => {
       title: stateForm.title,
       author: stateForm.author,
       category: stateForm.category,
-      
+
     };
 
     dispatch(addBook(book));
-    setStateForm({ title: '', author: '', category:'' });
+    setStateForm({ title: '', author: '', category: '' });
   };
   return (
     <div className={style.Books}>
