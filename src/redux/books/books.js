@@ -23,9 +23,7 @@ export const bookReducer = (state = [], action) => {
 
 export const getBooks = createAsyncThunk(GET_BOOK, async () => {
   const res = await axios.get(urlApi);
-  console.log(res);
   return { book: Object.entries(res.data) };
-  
 });
 
 export const addBook = createAsyncThunk(ADD_BOOK, async (booke) => {
@@ -45,9 +43,7 @@ export const addBook = createAsyncThunk(ADD_BOOK, async (booke) => {
         author: booke.author,
         title: booke.title,
         category: booke.category,
-
       }],
-
     ],
   };
 });

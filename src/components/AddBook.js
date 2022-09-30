@@ -11,14 +11,14 @@ const AddBook = () => {
     author: '',
     category: '',
 
-  }); 
+  });
 
   const changeFormState = (e) => {
     e.preventDefault();
     setStateForm({ ...stateForm, [e.target.name]: e.target.value });
   };
 
-  const sendBookState = (e) => {
+  const sendBookData = (e) => {
     e.preventDefault();
     if (!stateForm.title.trim() || !stateForm.author.trim()) return;
 
@@ -29,13 +29,13 @@ const AddBook = () => {
       category: stateForm.category,
 
     };
-
     dispatch(addBook(book));
+
     setStateForm({ title: '', author: '', category: '' });
   };
   return (
     <div className={style.Books}>
-      <form onSubmit={sendBookState}>
+      <form onSubmit={sendBookData}>
         <span name="book" className="my-3"> ADD NEW BOOK</span>
         <div className={style.BoxInput}>
           <input type="text" placeholder="Book title" name="title" onChange={changeFormState} value={stateForm.title} />
