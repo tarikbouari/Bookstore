@@ -7,11 +7,10 @@ import store from './redux/configureStore';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
-import { getBooks } from './redux/books/books';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-store.dispatch(getBooks());
 root.render(
+
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
