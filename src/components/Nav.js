@@ -1,4 +1,5 @@
 import React from 'react';
+import { BsPersonCircle } from 'react-icons/bs';
 import { NavLink } from 'react-router-dom';
 import style from './nav.module.css';
 
@@ -14,7 +15,7 @@ const Nav = () => (
         <span> BookStore CMS</span>
         <ul className={style.ulBox}>
           {Links.map((links) => (
-            <li key={links.to}>
+            <li key={links.to} className={style.styleList}>
               <NavLink to={links.to}>
                 {' '}
                 {links.text}
@@ -24,7 +25,10 @@ const Nav = () => (
 
         </ul>
       </div>
-      <span> User</span>
+      <div className={style.user}>
+        <BsPersonCircle />
+      </div>
+
     </nav>
   </header>
 
