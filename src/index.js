@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import { Provider, useDispatch } from 'react-redux';
+import { Provider } from 'react-redux';
 import store from './redux/configureStore';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -10,9 +10,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { getBooks } from './redux/books/books';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const dispatch = useDispatch();
-dispatch(getBooks());
-//  store.dispatch(getBooks());
+store.dispatch(getBooks());
 root.render(
   <React.StrictMode>
     <Provider store={store}>
