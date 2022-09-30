@@ -11,7 +11,7 @@ const AddBook = () => {
     author: '',
     category: '',
 
-  });
+  }); 
 
   const changeFormState = (e) => {
     e.preventDefault();
@@ -40,7 +40,7 @@ const AddBook = () => {
         <div className={style.BoxInput}>
           <input type="text" placeholder="Book title" name="title" onChange={changeFormState} value={stateForm.title} />
           <input type="text" placeholder="Author" name="author" onChange={changeFormState} value={stateForm.author} />
-          <input type="category" placeholder="category" name="category" onChange={changeFormState} value={stateForm.author} />
+          <input type="category" placeholder="category" name="category" onChange={changeFormState} value={stateForm.category} />
           <button type="submit" className="btn btn-primary">ADD BOOK</button>
         </div>
       </form>
