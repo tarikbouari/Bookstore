@@ -1,10 +1,14 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import AddBook from './AddBook';
 import Book from './Book';
+import { getBooks } from '../redux/books/books';
 
 const DisplayBook = () => {
   const books = useSelector((state) => state.book);
+  const dispatch = useDispatch();
+
+  dispatch(getBooks());
 
   return (
     <div>
