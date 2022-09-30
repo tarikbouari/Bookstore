@@ -1,21 +1,20 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const ADD_BOOK = 'bookstore/books/ADD_BOOK';
-const RMV_BOOK = 'bookstore/books/RMV_BOOK';
+const ADD_BOOK = 'bookstore/books/ADD_BOOKS';
+const RMV_BOOK = 'bookstore/books/RMV_BOOKS';
 const GET_BOOK = 'bookstore/books/GET_BOOKS';
 const key = 'HNRWWKcb5eZvN9Tn2PtR';
 const urlApi = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${key}/books`;
 
 export const bookReducer = (state = [], action) => {
   switch (action.type) {
-    case 'bookstore/books/GET_BOOK/fulfilled':
+    case 'bookstore/books/GET_BOOKS/fulfilled':
       return action.payload.book;
-    case 'bookstore/books/ADD_BOOK/fulfilled':
+    case 'bookstore/books/ADD_BOOKS/fulfilled':
       return [...state, action.payload.book];
-    case 'bookstore/books/RMV_BOOK/fulfilled':
+    case 'bookstore/books/RMV_BOOKS/fulfilled':
       return [...state.filter((item) => item[0] !== action.payload.id)];
-
     default:
       return state;
   }
@@ -47,7 +46,6 @@ export const addBook = createAsyncThunk(ADD_BOOK, async (booke) => {
     ],
   };
 });
-
 export const removeBook = createAsyncThunk(RMV_BOOK, async (id) => {
   await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${key}/books/${id}`);
   return { id };
