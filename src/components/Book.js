@@ -2,6 +2,8 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import style from './Book.module.css';
 import { removeBook } from '../redux/books/books';
+import Status from './Status';
+import Chapter from './Chapter';
 
 const Book = (prop) => {
   const dispatch = useDispatch();
@@ -12,12 +14,24 @@ const Book = (prop) => {
   return (
     <div>
       <div className={style.bookcard}>
-        <div className={style.itemBook}>
-          <p>{title}</p>
-          <p>{author}</p>
-          <button type="button" className="btn btn-primary" onClick={removeBookitem}>Remove</button>
+        <div className={style.Card1}>
+          <span className={style.lessonPanel}> Action</span>
+          <div className={style.itemBook}>
+            <span className={style.title}>{title}</span>
+            <span className={style.author}>{author}</span>
+            <button type="button" className="btn btn-primary" onClick={removeBookitem}>Remove</button>
+          </div>
+          <div className={style.actionBtn}>
+            <span> Comments</span>
+            <span> Remove</span>
+            <span> Edit</span>
+          </div>
         </div>
+
+        <Status />
+        <Chapter />
       </div>
+
     </div>
   );
 };
