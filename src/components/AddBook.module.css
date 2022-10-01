@@ -21,16 +21,19 @@
   color: #888;
 }
 
-.BoxInput input{
+.BoxInput input {
   width: 29%;
 }
+
 .BoxInput input[type=text] {
-  padding:  0.5rem;
+  padding: 0.5rem;
 }
+
 .BoxInput select {
-  padding:  0.5rem;
+  padding: 0.5rem;
 }
-.BoxInput button{
+
+.BoxInput button {
   width: 20%;
   font-size: 0.813rem;
   font-weight: bold;

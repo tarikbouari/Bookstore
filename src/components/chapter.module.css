@@ -1,20 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 .boxchapter {
-    padding: 0.5rem;
-    display: flex;
-    gap: 0.5rem;
-    flex-direction: column;
-    width: 25%;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  width: 25%;
 }
+
 .boxchapter button {
-    width: fit-content;
-    margin-top: 1rem;
-    border-radius: 3px !important;
+  width: fit-content;
+  margin-top: 1rem;
+  border-radius: 3px !important;
 }
+
 .currentChapter {
   text-transform: uppercase !important;
   height: 1.125rem;
   opacity: 0.5;
-  font-family: 'RobotoSlab';
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -22,13 +25,11 @@
   line-height: normal;
   letter-spacing: normal;
   color: #121212;
-  
 }
 
 .chapter {
-    width: 4.688rem;
+  width: 4.688rem;
   height: 1.313rem;
-  font-family: RobotoSlab;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;

@@ -15,7 +15,6 @@
 }
 
 .left span {
-  font-family: 'Montserrat';
   font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -36,24 +35,26 @@ ul li {
   margin: 0 !important;
 }
 
-.ulBox li:first-child a{
-  font-weight:500;
+.ulBox li:first-child a {
+  font-weight: 500;
   color: #121212;
   font-size: small;
 }
-.ulBox li:last-child a{
-  font-weight:400;
+
+.ulBox li:last-child a {
+  font-weight: 400;
   color: #121212;
   opacity: 0.5;
   font-size: small;
 }
+
 .List {
-  font-weight:400;
+  font-weight: 400;
   color: #121212;
 }
+
 .user svg {
   width: 25px;
   height: 25px;
   color: #0290ff;
 }
-

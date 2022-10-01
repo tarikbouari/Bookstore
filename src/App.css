@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -6,7 +8,6 @@
 
 body {
   background-color: #fafafa !important;
-  font-family: 'Montserrat';
   overflow-x: hidden;
 }
 
@@ -25,9 +26,11 @@ a {
 p {
   margin: 0 !important;
 }
+
 .TextStatus {
   margin: 1rem 4rem !important;
 }
+
 .checkStatus {
   margin-left: 2rem !important;
 }
