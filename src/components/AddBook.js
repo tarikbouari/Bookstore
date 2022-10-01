@@ -36,12 +36,22 @@ const AddBook = () => {
   return (
     <div className={style.Books}>
       <form onSubmit={sendBookData}>
-        <span name="book" className="my-3"> ADD NEW BOOK</span>
+        <span name="book" className={style.adBook}> ADD NEW BOOK </span>
         <div className={style.BoxInput}>
           <input type="text" placeholder="Book title" name="title" onChange={changeFormState} value={stateForm.title} />
           <input type="text" placeholder="Author" name="author" onChange={changeFormState} value={stateForm.author} />
-          <input type="category" placeholder="category" name="category" onChange={changeFormState} value={stateForm.category} />
-          <button type="submit" className="btn btn-primary">ADD BOOK</button>
+          <select
+            value={stateForm.category}
+            onChange={changeFormState}
+            name="category"
+          >
+            <option>Select Category:</option>
+            <option>Fiction</option>
+            <option>Action</option>
+            <option>Crime</option>
+          </select>
+
+          <button type="submit" className="btn btn-primary">ADD</button>
         </div>
       </form>
     </div>
