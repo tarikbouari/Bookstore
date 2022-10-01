@@ -14,21 +14,23 @@ const Book = (prop) => {
   return (
     <div>
       <div className={style.bookcard}>
-        <div className={style.Card1}>
+        <div className={style.card1}>
           <span className={style.lessonPanel}> Action</span>
           <div className={style.itemBook}>
             <span className={style.title}>{title}</span>
             <span className={style.author}>{author}</span>
-            <button type="button" className="btn btn-primary" onClick={removeBookitem}>Remove</button>
           </div>
           <div className={style.actionBtn}>
-            <span> Comments</span>
-            <span> Remove</span>
-            <span> Edit</span>
+            <button type="button"> Comments</button>
+            <div className={style.line2} />
+            <button type="button" onClick={removeBookitem}> Remove</button>
+            <div className={style.line2} />
+            <button type="button"> Edit</button>
           </div>
         </div>
 
         <Status />
+        <div className={style.line} />
         <Chapter />
       </div>
 
