@@ -1,14 +1,20 @@
 import React from 'react';
-import style from './status.module.css';
+import './status.css';
 
-const Status = () => (
-  <div className={style.boxStatus}>
-    <div className="oval" />
-    <div className={style.boxPercent}>
-      <span className="-Percent-Complete">64%</span>
-      <span className="Complete">completed</span>
+const Status = () => {
+  const random = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+  return (
+    <div className="boxStatus">
+      <div className="oval" />
+      <div className="boxPercent">
+        <span className="style.percent">
+          {random}
+          %
+        </span>
+        <span className="completed">completed</span>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Status;
