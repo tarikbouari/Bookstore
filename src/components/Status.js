@@ -13,6 +13,7 @@ const Status = () => {
         </span>
         <span className="completed">completed</span>
       </div>
+      <div className="line" />
     </div>
   );
 };
