@@ -2,7 +2,7 @@
 
 # Bookstore
 
-> "Bookstore is an oline web app that store books. Users can add books and it author, remove and edit them. Build with React Library,JSX, Bootstrap. 
+> "Bookstore is an oline web app that store books. Users can add books with author, remove and edit them. Build with React Library,JSX, Bootstrap. 
 
 
 ## Built With

@@ -11,10 +11,10 @@ const Categories = () => {
   };
   return (
     <div>
-      <button type="submit" className="btn btn-primary mx-5 w-25" onClick={checkBookStatus}>
+      <button type="submit" className=" checkStatus btn btn-primary mx-5 w-25" onClick={checkBookStatus}>
         Check Status
       </button>
-      <h5>{displayStatus}</h5>
+      <h5 className="TextStatus">{displayStatus}</h5>
     </div>
   );
 };

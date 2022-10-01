@@ -1,21 +1,27 @@
 
 .navigation {
   display: flex;
-  width: 100%;
-  height: 100px;
+  height: 70px;
+  margin: 0 6.25rem;
   justify-content: space-between;
   align-items: center;
 }
 
 .left {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: center;
+  width: 70%;
 }
 
 .left span {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
 }
 
 ul li {
@@ -27,4 +33,28 @@ ul li {
   gap: 1rem;
   align-items: center;
   margin: 0 !important;
+}
+
+.ulBox li:first-child a {
+  font-weight: 500;
+  color: #121212;
+  font-size: small;
+}
+
+.ulBox li:last-child a {
+  font-weight: 400;
+  color: #121212;
+  opacity: 0.5;
+  font-size: small;
+}
+
+.List {
+  font-weight: 400;
+  color: #121212;
+}
+
+.user svg {
+  width: 25px;
+  height: 25px;
+  color: #0290ff;
 }
