@@ -7,8 +7,7 @@
 body {
   background-color: #fafafa !important;
   font-family: 'Montserrat';
-  height: 100vh !important;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container-fluid {
@@ -25,4 +24,10 @@ a {
 
 p {
   margin: 0 !important;
+}
+.TextStatus {
+  margin: 1rem 4rem !important;
+}
+.checkStatus {
+  margin-left: 2rem !important;
 }
