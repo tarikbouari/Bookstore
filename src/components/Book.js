@@ -30,7 +30,7 @@ const Book = (prop) => {
         </div>
 
         <Status />
-        <div className={style.line} />
+
         <Chapter />
       </div>
 
