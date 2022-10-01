@@ -12,7 +12,7 @@ const Categories = () => {
   return (
     <div>
       <button type="submit" className=" checkStatus btn btn-primary mx-5 w-25" onClick={checkBookStatus}>
-        Check status
+        Check Status
       </button>
       <h5 className="TextStatus">{displayStatus}</h5>
     </div>
