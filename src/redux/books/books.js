@@ -20,9 +20,16 @@ export const bookReducer = (state = [], action) => {
   }
 };
 
+// Create Action creator to get data.
+
 export const getBooks = createAsyncThunk(GET_BOOK, async () => {
-  const res = await axios.get(urlApi);
-  return { book: Object.entries(res.data) };
+  try {
+    const res = await axios.get(urlApi);
+    return { book: Object.entries(res.data) };
+  } catch (err) {
+    alert(err); // Data failed to fetch
+    return 'err';
+  }
 });
 
 export const addBook = createAsyncThunk(ADD_BOOK, async (booke) => {
