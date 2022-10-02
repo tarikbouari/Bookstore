@@ -45,7 +45,7 @@ const AddBook = () => {
             onChange={changeFormState}
             name="category"
           >
-            <option>Select Category:</option>
+            <option className={style.bold}>Select Category</option>
             <option>Fiction</option>
             <option>Action</option>
             <option>Crime</option>
