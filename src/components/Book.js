@@ -7,7 +7,9 @@ import Chapter from './Chapter';
 
 const Book = (prop) => {
   const dispatch = useDispatch();
-  const { id, title, author } = prop;
+  const {
+    id, title, author, category,
+  } = prop;
   const removeBookitem = () => {
     dispatch(removeBook(id));
   };
@@ -15,7 +17,7 @@ const Book = (prop) => {
     <div>
       <div className={style.bookcard}>
         <div className={style.card1}>
-          <span className={style.lessonPanel}> Action</span>
+          <span className={style.lessonPanel}>{category}</span>
           <div className={style.itemBook}>
             <span className={style.title}>{title}</span>
             <span className={style.author}>{author}</span>
